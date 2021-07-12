@@ -17,25 +17,25 @@ Struktura plików **Vue**:
 ```js
   ./components
     ├── /About
-    │     ├── About.vue                     //Komponent do date time pickera
-    │     └── Home.vue                   //Komponent bazowy
+    │     ├── About.vue                  // komponent, w którym znajdują się informację o nas
+    │     └── Home.vue                   // komponent, w którym znajduję się strona główna
     ├── /CRUD
-    │   ├── AdditemForm.vue
-    │   ├── DashBoard.vue
-    │   ├── Listitem.vue
-    │   └── ListView.vue
+    │   ├── AdditemForm.vue              // komponent, odpowiedzialny za dodawanie nowego elemntu do listu i 
+    │   ├── DashBoard.vue                // komponent rodzic, z którego korzystają wszystkie komponenty w ./CRUD dostępny po zalogowaniu, po zalogowaniu jest wyśwtielany
+    │   ├── Listitem.vue                 // komponent odpowiedzialny za logikę do wyświetlania listy zadań
+    │   └── ListView.vue                 // komponent wyświetlający listę zadań przy użyciu komponentu Listitem
     │
     ├── /Registration
-    │   ├── Login.vue
-    │   ├── Logout.vue
-    │   └── Register.vue
+    │   ├── Login.vue                    // komponent odpowiedzialny za logowanie
+    │   ├── Logout.vue                   // komponent odpowiedzialny za wylogowanie
+    │   └── Register.vue                 // komponent odpowiedzialny za rejestracje
     │
-    └── NavBar.vue
-   app.js
-   bootstrap.js
-   routes.js
-   store.js
-   vuetify.js
+    └── NavBar.vue                       // komponent odpowiedzialny za wyświetlenie paska nawigacji
+   app.js                                // główny plik aplikacji Vue, w którym tworzony jest obiekt klasy Vue
+   bootstrap.js                          // plik, w którym zdefiniowany jest bootstrap
+   routes.js                             // plik, w którym zdefionowane są scieżki do Vue Router
+   store.js                              // plik, w którym zdefiniowany jest vuex store
+   vuetify.js                            // plik, w którym zdefiniowany jest vuetify
 ```
 
 Aby pliki **js** i **css** były widoczone należy podać je w pliku **webpack.mix.js** w folderze głównym projektu:
